@@ -4,6 +4,11 @@ import './App.css';
 function App() {
   return (
     <div className="App">
+
+      <ToDoItem/>
+      <ToDoItem/>
+      <ToDoItem/>
+
       <header className="App-header">
         <h1>React Base App</h1>
         <img src={logo} className="App-logo" alt="logo" />
@@ -20,6 +25,16 @@ function App() {
         </a>
       </header>
     </div>
+  );
+}
+
+function ToDoItem(){
+  return(
+    <li>
+      <span>V</span>
+      <p>Task 1</p>
+      <span>X</span>
+    </li>
   );
 }
 
