@@ -1,41 +1,27 @@
-import logo from './react.webp';
+import {TodoCounter} from './TodoCounter';
+import { TodoSearch } from './TodoSearch';
+import { TodoList } from './TodoList';
+import { TodoItem } from './TodoItem'; //ctrl + space to import VSCode
 import './App.css';
+import { CreateTodoButton } from './CreateTodoButton';
 
 function App() {
   return (
     <div className="App">
 
-      <ToDoItem/>
-      <ToDoItem/>
-      <ToDoItem/>
+      <TodoCounter/>
+      <TodoSearch />
 
-      <header className="App-header">
-        <h1>React Base App</h1>
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit the <code>src/App.js</code> file and save to reload
-        </p>
-        <a
-          className="App-link"
-          href="https://react.dev/"
-          target="_blank"
-          rel="noopener noreferrer"          
-        >
-          Learn React
-        </a>
-      </header>
+      <TodoList>
+        <TodoItem/>
+        <TodoItem/>
+        <TodoItem/>
+      </TodoList>
+
+      <CreateTodoButton/>
     </div>
   );
 }
 
-function ToDoItem(){
-  return(
-    <li>
-      <span>V</span>
-      <p>Task 1</p>
-      <span>X</span>
-    </li>
-  );
-}
 
 export default App;
