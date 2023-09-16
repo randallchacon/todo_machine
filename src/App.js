@@ -22,7 +22,7 @@ function App() {
       <TodoSearch />
 
       <TodoList>
-        {defaultTodos.map(todo =>(
+        {defaultTodos.map(todo =>( //create an array from another one
           <TodoItem key={todo.text} text={todo.text}/>
         ))}
       </TodoList>
